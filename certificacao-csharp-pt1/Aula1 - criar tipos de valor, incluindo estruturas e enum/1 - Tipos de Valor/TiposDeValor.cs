@@ -14,7 +14,7 @@ namespace certificacao_csharp_roteiro
             idade = 30;
             Console.WriteLine(idade);
 
-            int copiaIdade = idade;
+            System.Int32 copiaIdade = idade;
 
             Console.WriteLine($"idade: {idade}");
             Console.WriteLine($"copiaIdade: {copiaIdade}");
@@ -23,6 +23,9 @@ namespace certificacao_csharp_roteiro
 
             Console.WriteLine($"idade: {idade}");
             Console.WriteLine($"copiaIdade: {copiaIdade}");
+
+            int? idade2 = null;
+            System.Nullable<int> idade3 = null;
         }
     }
 }
