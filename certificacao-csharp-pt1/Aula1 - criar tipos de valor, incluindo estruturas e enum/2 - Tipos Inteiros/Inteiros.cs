@@ -10,19 +10,6 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            //Type    Range                               Size
-            //======================================================================
-            //sbyte  -128 to 127                          Signed 8-bit integer
-            //byte    0 to 255                            Unsigned 8-bit integer
-            //char    U+0000 to U+ffff                    Unicode 16-bit character
-            //short  -32,768 to 32,767                    Signed 16-bit integer
-            //ushort  0 to 65,535                         Unsigned 16-bit integer
-            //int     -2,147,483,648 to 2,147,483,647     Signed 32-bit integer
-            //uint    0 to 4,294,967,295                  Unsigned 32-bit integer
-            //long    -9,223,372,036,854,775,808 
-            //to 9,223,372,036,854,775,807    Signed 64-bit integer
-            //ulong   0 to 18,446,744,073,709,551,615     Unsigned 64-bit integer
-
             char resposta = 'S';// System.Char
 
             byte nivelDeAzul = 0xFF; // = 255 em decimal
@@ -67,6 +54,19 @@ namespace certificacao_csharp_roteiro
 
             //long populacaoDoBrasil = 207_660_929.345;
             //Error CS0266  Cannot implicitly convert type 'double' to 'long'.
+
+            //Tipo    Faixa de valores                    Tamanho
+            //======================================================================
+            //sbyte  -128 to 127                          Com sinal 8-bit integer
+            //byte    0 to 255                            Sem sinal 8-bit integer
+            //char    U+0000 to U+ffff                    Unicode 16-bit character
+            //short  -32,768 to 32,767                    Com sinal 16-bit integer
+            //ushort  0 to 65,535                         Sem sinal 16-bit integer
+            //int     -2,147,483,648 to 2,147,483,647     Com sinal 32-bit integer
+            //uint    0 to 4,294,967,295                  Sem sinal 32-bit integer
+            //long    -9,223,372,036,854,775,808 
+            //            to 9,223,372,036,854,775,807    Com sinal 64-bit integer
+            //ulong   0 to 18,446,744,073,709,551,615     Sem sinal 64-bit integer
 
         }
     }
