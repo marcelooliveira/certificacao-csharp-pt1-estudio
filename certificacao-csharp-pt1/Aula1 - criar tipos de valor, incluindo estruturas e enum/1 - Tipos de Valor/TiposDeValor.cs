@@ -10,7 +10,9 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            
+            int idade;
+            idade = 30;
+            Console.WriteLine(idade);
         }
     }
 }
