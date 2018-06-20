@@ -43,10 +43,10 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine("x * y / z = {0}", resultado2);
             Console.WriteLine($"O resultado é do tipo: {resultado2.GetType()}");
             ///
-            ///C#      .NET           Faixa de Valores         Precisão
-            ///============================================================
-            ///float	  System.Single  ±1.5e−45 to ±3.4e38	 7    dígitos
-            ///double  System.Double  ±5.0e−324 to ±1.7e308	 15-16 dígitos
+            //C#      .NET           Faixa de Valores         Precisão
+            //============================================================
+            //float	  System.Single  ±1.5e−45 to ±3.4e38	 7    dígitos
+            //double  System.Double  ±5.0e−324 to ±1.7e308	 15-16 dígitos
         }
     }
 }
