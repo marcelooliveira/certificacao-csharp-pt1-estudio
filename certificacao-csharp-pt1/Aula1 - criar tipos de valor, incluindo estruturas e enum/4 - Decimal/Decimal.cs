@@ -30,8 +30,8 @@ namespace certificacao_csharp_roteiro
             ///Console.WriteLine((valorProduto1 + valorProduto2) == 30.299999999999997);
             
             ///decimal materiaPrima = 10.1;
-            ///decimal maoDeObra = 20.2;
-            ///decimal custo = 30.3;
+            ///decimal maoDeObra    = 20.2;
+            ///decimal custo        = 30.3;
             
             ///Console.WriteLine("Descobrindo se (10.1m + 20.2m) == 30.3m");
             ///Console.WriteLine((materiaPrima + maoDeObra) == custo);
