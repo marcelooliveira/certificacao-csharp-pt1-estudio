@@ -66,7 +66,7 @@ namespace certificacao_csharp_roteiro
             {
                 new MenuItem("Tipos de Valor", typeof(TiposDeValor)),
                 new MenuItem("Tipos Inteiros", typeof(TiposInteiros)),
-                //new MenuItem("Ponto Flututante", typeof(PontoFlututante)),
+                new MenuItem("Ponto Flututante", typeof(PontoFlutuante)),
                 //new MenuItem("Decimal", typeof(Decimal)),
                 //new MenuItem("Booleanos", typeof(Booleanos)),
                 //new MenuItem("Estruturas", typeof(Estruturas)),
