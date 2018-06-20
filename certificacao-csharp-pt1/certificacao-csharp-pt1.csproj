@@ -47,6 +47,7 @@
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos de Valor\TiposDeValor.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\2 - Tipos Inteiros\Inteiros.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\3 - Tipos de Ponto Flutuante\PontoFlutuante.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\4 - Decimal\Decimal.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
