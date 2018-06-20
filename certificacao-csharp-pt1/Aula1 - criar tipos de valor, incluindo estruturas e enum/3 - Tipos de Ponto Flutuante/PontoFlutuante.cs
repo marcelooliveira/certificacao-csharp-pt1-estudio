@@ -24,7 +24,7 @@ namespace certificacao_csharp_roteiro
             ///float numeroPI = 3.14159f; // System.Single
             ///Console.WriteLine($"numeroPI: {numeroPI}");
             ///
-            /////float numeroMuitoMaior = 6e100;
+            ///float numeroMuitoMaior = 6e100;
             ///double numeroMuitoMaior = 6e100;
             ///
             ///Console.WriteLine();
