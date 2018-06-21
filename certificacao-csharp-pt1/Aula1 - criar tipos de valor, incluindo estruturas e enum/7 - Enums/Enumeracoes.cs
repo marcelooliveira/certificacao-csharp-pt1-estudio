@@ -10,7 +10,9 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+
         }
     }
 }
 ///Seg, Ter, Qua, Qui, Sex, Sab, Dom
+///0, 1, 2, 4, 8, 16, 32
