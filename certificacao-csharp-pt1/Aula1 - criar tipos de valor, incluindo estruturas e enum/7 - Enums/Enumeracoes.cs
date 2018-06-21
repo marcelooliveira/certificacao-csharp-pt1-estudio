@@ -13,3 +13,4 @@ namespace certificacao_csharp_roteiro
         }
     }
 }
+///Seg, Ter, Qua, Qui, Sex, Sab, Dom
