@@ -32,7 +32,12 @@ namespace certificacao_csharp_roteiro
         }
     }
 
-    public class ClassePosicaoGPS : IHemisferio
+    interface IPosicaoGPS
+    {
+        bool EstaNoHemisferioNorte();
+    }
+
+    public class ClassePosicaoGPS : IPosicaoGPS
     {
         public double Latitude;
         public double Longitude;
