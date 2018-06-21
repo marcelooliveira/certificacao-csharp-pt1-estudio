@@ -25,7 +25,7 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine($"idade: {idade}");
             Console.WriteLine($"copiaIdade: {copiaIdade}");
 
-            ///< image url="$(ProjectDir)img1.png" />
+            ///<image url="$(ProjectDir)img1.png" />
 
             var cliente1 = new Cliente("José da Silva", 42);
             var cliente2 = cliente1;
@@ -42,7 +42,7 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine($"cliente1: {cliente1}");
             Console.WriteLine($"cliente2: {cliente2}");
 
-            ///< image url="$(ProjectDir)img2.png" />
+            ///<image url="$(ProjectDir)img2.png" />
 
         }
     }
