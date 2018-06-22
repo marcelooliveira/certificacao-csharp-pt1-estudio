@@ -29,11 +29,11 @@ namespace certificacao_csharp_roteiro
         public static void Executar()
         {
 
-            /// //Executa diretamente o método
-            ///Console.WriteLine($"Duplicar(7.5): {Duplicar(7.5)}");
+            //Executa diretamente o método
+            Console.WriteLine($"Duplicar(7.5): {Duplicar(7.5)}");
 
-            /// //Executa diretamente o método
-            ///Console.WriteLine($"Triplicar(7.5): {Triplicar(7.5)}");
+            //Executa diretamente o método
+            Console.WriteLine($"Triplicar(7.5): {Triplicar(7.5)}");
 
             ///invoca o delegado
             ///OperacaoMatematica metodoMultiplicacao = Duplicar;
