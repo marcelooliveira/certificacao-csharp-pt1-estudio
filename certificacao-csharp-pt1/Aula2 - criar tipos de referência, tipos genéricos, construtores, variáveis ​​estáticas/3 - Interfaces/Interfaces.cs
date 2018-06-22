@@ -10,81 +10,114 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            OnibusTurismo onibusTurismo = new OnibusTurismo("Turbo Jet Bus", "Mercedes", 2015, 8);
-            Console.WriteLine(onibusTurismo); ;
+            //Televisao eletro1 = new Televisao();
+            //eletro1 = new Abajur();
+
+            IEletrodomestico eletro1 = new Televisao();
+            eletro1.Ligou += Eletro1_Ligou;
+            eletro1.Desligou += Eletro1_Desligou;
+            eletro1.Ligar();
+            eletro1.Desligar();
+        }
+
+        private void Eletro1_Desligou(object sender, EventArgs e)
+        {
+            Console.WriteLine("eletrodoméstico desligou");
+        }
+
+        private void Eletro1_Ligou(object sender, EventArgs e)
+        {
+            Console.WriteLine("eletrodoméstico ligou");
         }
     }
 
-    public interface IVeiculo
+    interface IEletrodomestico
     {
-        int Rodas { get; set; }
+        void Ligar();
+        void Desligar();
+        event EventHandler Ligou;
+        event EventHandler Desligou;
     }
 
-    public interface IVeiculoMotorizado : IVeiculo
+    interface IPotenciaLampada
     {
-        //métodos
-        void Embarcar();
-        void Desembarcar();
-
-        //propriedades
-        string Nome { get; set; }
-        string Fabricante { get; set; }
-        int Ano { get; set; }
-
-        //evento
-        event EventHandler MotorLigou;
+        int Potencia { get; set; }
     }
 
-    public interface ITransportePublico
+    interface IRadio
     {
-        void CobrarPassagem();
+        double FrequenciaSintonizada { get; set; }
     }
 
-    public class Onibus: IVeiculoMotorizado, ITransportePublico
+    class Televisao : IEletrodomestico, IRadio
     {
-        public Onibus(string nome, string fabricante, int ano, int rodas)
+        public double FrequenciaSintonizada { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public event EventHandler Ligou;
+        public event EventHandler Desligou;
+
+        public void Desligar()
         {
-            Nome = nome;
-            Fabricante = fabricante;
-            Ano = ano;
-            Rodas = rodas;
+            Desligou(this, new EventArgs());
         }
 
-        public string Nome { get; set; }
-        public string Fabricante { get; set; }
-        public int Ano { get; set; }
-        public int Rodas { get; set; }
-
-        public event EventHandler MotorLigou;
-
-        public void CobrarPassagem()
+        public void Ligar()
         {
-            //código para CobrarPassagem
+            Ligou(this, new EventArgs());
+        }
+    }
+
+    class Abajur : IEletrodomestico, IPotenciaLampada
+    {
+        public int Potencia { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public event EventHandler Ligou;
+        public event EventHandler Desligou;
+
+        public void Desligar()
+        {
             throw new NotImplementedException();
         }
 
-        public void Desembarcar()
+        public void Ligar()
         {
-            //código para Desembarcar
             throw new NotImplementedException();
-        }
-
-        public void Embarcar()
-        {
-            //código para Embarcar
-            throw new NotImplementedException();
-        }
-
-        public override string ToString()
-        {
-            return $"nome: {Nome}, fabricante {Fabricante}, ano {Ano}, rodas {Rodas}";
         }
     }
 
-    public class OnibusTurismo : Onibus
+    class Lanterna : IEletrodomestico, IPotenciaLampada
     {
-        public OnibusTurismo(string nome, string fabricante, int ano, int rodas) : base(nome, fabricante, ano, rodas)
+        public int Potencia { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public event EventHandler Ligou;
+        public event EventHandler Desligou;
+
+        public void Desligar()
         {
+            throw new NotImplementedException();
+        }
+
+        public void Ligar()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class Radio : IEletrodomestico, IRadio
+    {
+        public double FrequenciaSintonizada { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public event EventHandler Ligou;
+        public event EventHandler Desligou;
+
+        public void Desligar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Ligar()
+        {
+            throw new NotImplementedException();
         }
     }
 }

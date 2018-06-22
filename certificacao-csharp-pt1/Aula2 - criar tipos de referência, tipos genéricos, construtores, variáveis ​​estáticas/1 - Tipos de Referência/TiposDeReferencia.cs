@@ -43,7 +43,6 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine($"cliente2: {cliente2}");
 
             ///<image url="$(ProjectDir)img2.png" />
-
         }
     }
 

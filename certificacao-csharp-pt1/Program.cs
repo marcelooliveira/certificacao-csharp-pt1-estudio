@@ -73,7 +73,7 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Enumeracoes", typeof(Enumeracoes)),
                 new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),
                 new MenuItem("Classes", typeof(Classes)),
-                //new MenuItem("Interfaces", typeof(Interfaces)),
+                new MenuItem("Interfaces", typeof(Interfaces)),
                 //new MenuItem("Delegates", typeof(Delegates)),               
                 //new MenuItem("Dinâmicos", typeof(Dinamicos)),
                 //new MenuItem("Objetos", typeof(Objetos)),
