@@ -40,9 +40,6 @@ namespace certificacao_csharp_roteiro
             MetodoMultiplicacao metodoMultiplicacao = Duplicar;
             Console.WriteLine(metodoMultiplicacao(7.5));
 
-            ///var metodoMultiplicacao = Duplicar;
-            ///Console.WriteLine($"Duplicar(7.5): {metodoMultiplicacao(7.5)}");
-
             ///troca a referência
             metodoMultiplicacao = Triplicar;
             Console.WriteLine($"Triplicar(7.5): {metodoMultiplicacao(7.5)}");
@@ -53,17 +50,12 @@ namespace certificacao_csharp_roteiro
                 return input * input;
             };
 
-            ///OperacaoMatematica metodoQuadrado = delegate (double input)
-            ///{
-            ///    return input * input;
-            ///};
-
             double quadrado = metodoQuadrado(5);
             Console.WriteLine("quadrado: {0}", quadrado);
 
             // intancia um delegado com uma expressão lambda
             MetodoMultiplicacao metodoCubo = input => input * input * input;
-            ///OperacaoMatematica metodoCubo = s => s * s * s;
+
             double cubo = metodoCubo(4.375);
 
             Console.WriteLine("cubo: {0}", cubo);
