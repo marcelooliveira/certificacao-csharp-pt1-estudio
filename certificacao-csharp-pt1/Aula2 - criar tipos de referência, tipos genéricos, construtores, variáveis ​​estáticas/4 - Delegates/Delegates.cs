@@ -35,8 +35,7 @@ namespace certificacao_csharp_roteiro
             //Executa diretamente o método
             Console.WriteLine($"Triplicar(7.5): {Triplicar(7.5)}");
 
-            ///invoca o delegado
-            ///OperacaoMatematica metodoMultiplicacao = Duplicar;
+            ///var metodoMultiplicacao = Duplicar;
             ///Console.WriteLine($"Duplicar(7.5): {metodoMultiplicacao(7.5)}");
 
             ///troca a referência
