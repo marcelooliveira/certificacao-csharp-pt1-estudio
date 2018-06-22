@@ -17,7 +17,7 @@ namespace certificacao_csharp_roteiro
             dinamico = dinamico + 3;
             Console.WriteLine(dinamico);
 
-            dinamico.teste();
+            //dinamico.teste();
         }
     }
 }
