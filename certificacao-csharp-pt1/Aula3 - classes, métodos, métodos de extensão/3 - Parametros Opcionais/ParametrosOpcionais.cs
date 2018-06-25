@@ -10,25 +10,36 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+            ClienteEspecial clienteEspecial = new ClienteEspecial("Lucas Skywalker");
+            clienteEspecial.FazerPedido(1, "Residencial", 1);
             ///ClienteEspecial cliente = new ClienteEspecial("Lucas Skywalker");
             ///cliente.FazerPedido(1, "Residencial", 1);
-            
+
+            clienteEspecial = new ClienteEspecial();
+            clienteEspecial.FazerPedido(1, "Residencial", 1);
             ///cliente = new ClienteEspecial();
+            clienteEspecial.FazerPedido(2, "Comercial");
             ///cliente.FazerPedido(2, "Comercial");
+            clienteEspecial.FazerPedido(3);
             ///cliente.FazerPedido(3);
-            
-            /// As instruções a seguir produzem erros de compilação.
-            /// Um argumento tem que ser fornecido para o primeiro parâmetro, e ele
-            /// precisa ser um inteiro.
+
+            // As instruções a seguir produzem erros de compilação.
+            // Um argumento tem que ser fornecido para o primeiro parâmetro, e ele
+            // precisa ser um inteiro.
+            //clienteEspecial.FazerPedido("Residencial", 1);
+            //clienteEspecial.FazerPedido();
             ///cliente.FazerPedido("Residencial", 1);
             ///cliente.FazerPedido();
-            
-            /// Você não pode deixar um "buraco" nos argumentos
+
+            // Você não pode deixar um "buraco" nos argumentos
+            //clienteEspecial.FazerPedido(3, , 4);
+            //clienteEspecial.FazerPedido(3, 4);
             ///cliente.FazerPedido(3, , 4);
             ///cliente.FazerPedido(3, 4);
-            
-            /// Você pode usar um argumento nomeado para fazer 
-            /// a instrução anterior funcionar.
+
+            // Você pode usar um argumento nomeado para fazer 
+            // a instrução anterior funcionar.
+            clienteEspecial.FazerPedido(3, quantidade: 4);
             ///cliente.FazerPedido(3, quantidade: 4);
         }
     }
@@ -36,7 +47,7 @@ namespace certificacao_csharp_roteiro
     class ClienteEspecial
     {
         private readonly string nome;
-        public ClienteEspecial(string nome)
+        public ClienteEspecial(string nome = "Anônimo")
         {
             this.nome = nome;
         }
@@ -44,7 +55,7 @@ namespace certificacao_csharp_roteiro
         ///O primeiro parâmetro é obrigatório e não tem nenhum valor padrão associado a ele.
         ///Portanto, ele não é opcional. Tanto endereco quanto quantidade tem valores padrão
         ///associados. Eles são opcionais.
-        public void FazerPedido(int produtoId, string endereco, int quantidade)
+        public void FazerPedido(int produtoId, string endereco = "Residencial", int quantidade = 10)
         {
             Console.WriteLine("cliente {0}: produtoId: {1}, endereço: {2}, quantidade: {3}.", nome, produtoId, endereco, quantidade);
         }
