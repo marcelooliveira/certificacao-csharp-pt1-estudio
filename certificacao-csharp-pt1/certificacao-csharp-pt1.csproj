@@ -59,6 +59,8 @@
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\6 - Dynamic\Dinamicos.cs" />
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\7 - Strings\Strings.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\2 - Metodos\Metodos.cs" />
+    <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Parametros Opcionais\ParametrosNomeados.cs" />
+    <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Parametros Opcionais\ParametrosOpcionais.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
