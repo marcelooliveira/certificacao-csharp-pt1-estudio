@@ -41,12 +41,12 @@ namespace certificacao_csharp_roteiro
             Altura = altura;
             Largura = largura;
 
-            Console.WriteLine($"altura: {altura}, largura: {largura}");
+            ///Console.WriteLine($"altura: {altura}, largura: {largura}");
 
-            var area = Altura * Largura;
-            Console.WriteLine($"area: {area}");
+            ///var area = Altura * Largura;
+            ///Console.WriteLine($"area: {area}");
 
-            Console.WriteLine($"Area(): {Area()}");
+            ///Console.WriteLine($"Area(): {Area()}");
         }
 
         public double Altura { get; set; }
