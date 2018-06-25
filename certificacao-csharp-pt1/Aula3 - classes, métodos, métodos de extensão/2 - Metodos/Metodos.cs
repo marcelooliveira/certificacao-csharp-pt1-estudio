@@ -11,7 +11,7 @@ namespace certificacao_csharp_roteiro
         public void Executar()
         {
             Retangulo retangulo = new Retangulo(12, 10);
-            ///Console.WriteLine($"retangulo.Area: {retangulo.Area()}");
+            ///Console.WriteLine($"retangulo.Area: {retangulo.GetArea()}");
 
             ///< image url="$(ProjectDir)img4.png" />
 
@@ -36,6 +36,9 @@ namespace certificacao_csharp_roteiro
 
     class Retangulo
     {
+        public double Altura { get; set; }
+        public double Largura { get; set; }
+
         public Retangulo(double altura, double largura)
         {
             Altura = altura;
@@ -45,19 +48,11 @@ namespace certificacao_csharp_roteiro
 
             ///var area = Altura * Largura;
             ///Console.WriteLine($"area: {area}");
-
-            ///Console.WriteLine($"Area(): {Area()}");
         }
 
-        public double Altura { get; set; }
-        public double Largura { get; set; }
+        ///public, internal, protected (+internal), private (+internal)
 
-        public double Area()
-        {
-            return Altura * Largura;
-        }
-        
-        public bool Semelhante(double outroRetanguloAltura, double outroRetanguloLargura)
+        bool Semelhante(double outroRetanguloAltura, double outroRetanguloLargura)
         {
             return
                 ((Largura / Altura) == /*proporção deste retângulo*/
@@ -77,4 +72,5 @@ namespace certificacao_csharp_roteiro
     ///        (outroRetangulo.Largura / outroRetangulo.Altura));
     ///}
     }
+    ///public, protected, internal, private
 }
