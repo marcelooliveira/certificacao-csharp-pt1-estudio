@@ -62,15 +62,5 @@ namespace certificacao_csharp_roteiro
                 (outroRetanguloLargura / outroRetanguloAltura));
         }
 
-    ///public bool Semelhante(Retangulo outroRetangulo)
-    ///{
-    ///    return
-    ///        ((Largura / Altura) == /*proporção deste retângulo*/
-    ///        (outroRetangulo.Largura / outroRetangulo.Altura)) /*proporção do outro retângulo*/
-    ///        ||
-    ///        ((Altura / Largura) == /*compara a proporção inversa*/
-    ///        (outroRetangulo.Largura / outroRetangulo.Altura));
-    ///}
     }
-    ///public, protected, internal, private
 }
