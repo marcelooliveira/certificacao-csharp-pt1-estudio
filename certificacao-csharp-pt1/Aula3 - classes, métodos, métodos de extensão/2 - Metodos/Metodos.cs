@@ -11,19 +11,26 @@ namespace certificacao_csharp_roteiro
         public void Executar()
         {
             Retangulo retangulo = new Retangulo(12, 10);
-            Console.WriteLine($"retangulo.Area: {retangulo.Area()}");
+            ///Console.WriteLine($"retangulo.Area: {retangulo.Area()}");
 
-            Retangulo outroRetangulo = new Retangulo(10, 10);
-            Console.WriteLine("Retangulo outroRetangulo = new Retangulo(10, 10);");
+            ///< image url="$(ProjectDir)img4.png" />
 
-            Console.WriteLine($"retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura): " +
-                $"{retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura)}");
+            ///< image url="$(ProjectDir)img5.png" />
 
-            outroRetangulo = new Retangulo(5, 6);
-            Console.WriteLine("Retangulo outroRetangulo = new Retangulo(5, 6);");
 
-            Console.WriteLine($"retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura): " +
-                $"{retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura)}");
+
+            ///Retangulo outroRetangulo = new Retangulo(10, 10);
+            ///Console.WriteLine("Retangulo outroRetangulo = new Retangulo(10, 10);");
+            
+
+            ///Console.WriteLine($"retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura): " +
+            ///    $"{retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura)}");
+
+            ///outroRetangulo = new Retangulo(5, 6);
+            ///Console.WriteLine("Retangulo outroRetangulo = new Retangulo(5, 6);");
+
+            ///Console.WriteLine($"retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura): " +
+            ///    $"{retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura)}");
         }
     }
 
@@ -60,14 +67,14 @@ namespace certificacao_csharp_roteiro
                 (outroRetanguloLargura / outroRetanguloAltura));
         }
 
-        public bool Semelhante(Retangulo outroRetangulo)
-        {
-            return
-                ((Largura / Altura) == /*proporção deste retângulo*/
-                (outroRetangulo.Largura / outroRetangulo.Altura)) /*proporção do outro retângulo*/
-                ||
-                ((Altura / Largura) == /*compara a proporção inversa*/
-                (outroRetangulo.Largura / outroRetangulo.Altura));
-        }
+    ///public bool Semelhante(Retangulo outroRetangulo)
+    ///{
+    ///    return
+    ///        ((Largura / Altura) == /*proporção deste retângulo*/
+    ///        (outroRetangulo.Largura / outroRetangulo.Altura)) /*proporção do outro retângulo*/
+    ///        ||
+    ///        ((Altura / Largura) == /*compara a proporção inversa*/
+    ///        (outroRetangulo.Largura / outroRetangulo.Altura));
+    ///}
     }
 }
