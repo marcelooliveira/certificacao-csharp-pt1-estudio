@@ -11,16 +11,17 @@ namespace certificacao_csharp_roteiro
         public void Executar()
         {
             Retangulo retangulo = new Retangulo(12, 10);
-            ///Console.WriteLine(retangulo.GetArea());
+            Console.WriteLine(retangulo.GetArea());
 
-            ///< image url="$(ProjectDir)img4.png" />
+            ///<image url="$(ProjectDir)img4.png" />
 
-            ///< image url="$(ProjectDir)img5.png" />
+            ///<image url="$(ProjectDir)img5.png" />
             
-            ///Retangulo outroRetangulo = new Retangulo(10, 10);
-            ///Console.WriteLine(retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura));
+            Retangulo outroRetangulo = new Retangulo(10, 10);
+            Console.WriteLine(retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura));
 
-            ///outroRetangulo = new Retangulo(5, 6);
+            outroRetangulo = new Retangulo(5, 6);
+            Console.WriteLine(Retangulo.Semelhante(retangulo, outroRetangulo));
             ///Console.WriteLine(retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura));
         }
     }
@@ -36,14 +37,21 @@ namespace certificacao_csharp_roteiro
             Altura = altura;
             Largura = largura;
 
-            ///Console.WriteLine($"altura: {altura}, largura: {largura}");
+            Console.WriteLine($"altura: {altura}, largura: {largura}");
 
-            ///var area = Altura * Largura;
-            ///Console.WriteLine($"area: {area}");
+            var area = GetArea();
+            Console.WriteLine($"area: {area}");
+        }
+
+        //public, internal, protected (+internal), private (+internal)
+
+        public double GetArea()
+        {
+            return Altura * Largura;
         }
 
         ///public, internal, protected (+internal), private (+internal)
-        bool Semelhante(double outroRetanguloAltura, double outroRetanguloLargura)
+        internal bool Semelhante(double outroRetanguloAltura, double outroRetanguloLargura)
         {
             return
                 ((Largura / Altura) == /*proporção deste retângulo*/
@@ -53,5 +61,14 @@ namespace certificacao_csharp_roteiro
                 (outroRetanguloLargura / outroRetanguloAltura));
         }
 
+        internal static bool Semelhante(Retangulo retangulo, Retangulo outroRetangulo)
+        {
+            return
+                ((retangulo.Largura / retangulo.Altura) == /*proporção deste retângulo*/
+                (outroRetangulo.Largura / outroRetangulo.Altura)) /*proporção do outro retângulo*/
+                ||
+                ((retangulo.Altura / retangulo.Largura) == /*compara a proporção inversa*/
+                (outroRetangulo.Largura / outroRetangulo.Altura));
+        }
     }
 }
