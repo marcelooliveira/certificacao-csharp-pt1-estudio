@@ -34,6 +34,7 @@ namespace certificacao_csharp_roteiro
         }
     }
 
+    ///public, internal, protected, private
     class Retangulo
     {
         public double Altura { get; set; }
@@ -51,7 +52,6 @@ namespace certificacao_csharp_roteiro
         }
 
         ///public, internal, protected (+internal), private (+internal)
-
         bool Semelhante(double outroRetanguloAltura, double outroRetanguloLargura)
         {
             return
