@@ -11,26 +11,17 @@ namespace certificacao_csharp_roteiro
         public void Executar()
         {
             Retangulo retangulo = new Retangulo(12, 10);
-            ///Console.WriteLine($"retangulo.Area: {retangulo.GetArea()}");
+            ///Console.WriteLine(retangulo.GetArea());
 
             ///< image url="$(ProjectDir)img4.png" />
 
             ///< image url="$(ProjectDir)img5.png" />
-
-
-
-            ///Retangulo outroRetangulo = new Retangulo(10, 10);
-            ///Console.WriteLine("Retangulo outroRetangulo = new Retangulo(10, 10);");
             
-
-            ///Console.WriteLine($"retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura): " +
-            ///    $"{retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura)}");
+            ///Retangulo outroRetangulo = new Retangulo(10, 10);
+            ///Console.WriteLine(retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura));
 
             ///outroRetangulo = new Retangulo(5, 6);
-            ///Console.WriteLine("Retangulo outroRetangulo = new Retangulo(5, 6);");
-
-            ///Console.WriteLine($"retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura): " +
-            ///    $"{retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura)}");
+            ///Console.WriteLine(retangulo.Semelhante(outroRetangulo.Altura, outroRetangulo.Largura));
         }
     }
 
