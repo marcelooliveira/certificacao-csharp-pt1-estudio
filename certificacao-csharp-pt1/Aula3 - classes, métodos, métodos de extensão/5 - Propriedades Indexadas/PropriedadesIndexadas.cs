@@ -11,8 +11,8 @@ namespace certificacao_csharp_roteiro
         public void Executar()
         {
             var sala = new Sala();
-            sala["D01"] = new ClienteCinema("Maria de Souza");
-            sala["D02"] = new ClienteCinema("José da Silva");
+            sala.SetReserva("D01", new ClienteCinema("Maria de Souza"));
+            sala.SetReserva("D02", new ClienteCinema("José da Silva"));
 
             sala.ImprimirReservas();
         }
@@ -38,10 +38,14 @@ namespace certificacao_csharp_roteiro
         private readonly IDictionary<string, ClienteCinema> reservas
             = new Dictionary<string, ClienteCinema>();
 
-        public ClienteCinema this[string codigoAssento]
+        public ClienteCinema GetReserva(string codigoAssento)
         {
-            get { return reservas[codigoAssento]; }
-            set { reservas[codigoAssento] = value; }
+            return reservas[codigoAssento];
+        }
+
+        public void SetReserva(string codigoAssento, ClienteCinema cliente)
+        {
+            reservas[codigoAssento] = cliente;
         }
 
         public void ImprimirReservas()
