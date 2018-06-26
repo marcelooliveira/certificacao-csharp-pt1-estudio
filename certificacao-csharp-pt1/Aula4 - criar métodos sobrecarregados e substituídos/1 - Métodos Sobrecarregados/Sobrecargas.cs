@@ -10,41 +10,25 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            Fisica fisica = new Fisica();
-
+            ///<image url="$(ProjectDir)img7.png" />
+            //VOLUME DO CUBO = lado ^ 3;
             int lado = 3;
-            Console.WriteLine($"Volume(lado): {fisica.Volume(lado)}");
 
+            
+
+            ///<image url="$(ProjectDir)img8.png" />
+            //VOLUME DO CILINDRO = altura * PI * raio ^ 2;
             double raio = 2;
             int altura = 10;
-            Console.WriteLine($"Volume(raio, altura): {fisica.Volume(raio, altura)}");
 
-            long largura = 5;
-            altura = 7;
-            int profundidade = 9;
-            Console.WriteLine($"Volume(largura, altura, profundidade): {fisica.Volume(largura, altura, profundidade)}");
+
+            
+
+            ///<image url="$(ProjectDir)img9.png" />
+            //VOLUME DO PRISMA = largura * profundidade * altura
+            long largura = 10;
+            altura = 6;
+            int profundidade = 4;
         }
-    }
-
-    class Fisica
-    {
-        // volume de um cubo
-        public int Volume(int lado)
-        {
-            return lado * lado * lado;
-        }
-
-        // volume de um cilindro
-        public double Volume(double raio, int altura)
-        {
-            return Math.PI * raio * raio * (double)altura;
-        }
-
-        // volume de um paralelepípedo
-        public long Volume(long largura, int altura, int profundidade)
-        {
-            return largura * altura * profundidade;
-        }
-
     }
 }

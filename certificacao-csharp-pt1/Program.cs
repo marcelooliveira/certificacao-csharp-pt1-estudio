@@ -83,7 +83,7 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Parâmetros Opcionais", typeof(ParametrosOpcionais)),
                 new MenuItem("Métodos de Extensão", typeof(MetodosDeExtensao)),
                 new MenuItem("Propriedades Indexadas", typeof(PropriedadesIndexadas)),
-                //new MenuItem("Sobrecargas", typeof(Sobrecargas)),
+                new MenuItem("Sobrecargas", typeof(Sobrecargas)),
                 //new MenuItem("Métodos Substituidos", typeof(MetodosSubstituidos)),
                 //new MenuItem("Boxing", typeof(Boxing)),                
                 //new MenuItem("Unboxing", typeof(Unboxing)),
