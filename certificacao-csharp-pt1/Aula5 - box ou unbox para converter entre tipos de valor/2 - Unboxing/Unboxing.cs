@@ -10,14 +10,14 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            int numero = 123;      // tipo de valor
+            int numero = 57;      // tipo de valor
             object caixa = numero;     // boxing
 
             ///< image url="$(ProjectDir)img10.png" />
 
             try
             {
-                int unboxed = (short)caixa;  // tenta fazer unbox
+                ///int unboxed = (short)caixa;  // tenta fazer unbox
 
                 System.Console.WriteLine("Unboxing OK.");
             }
