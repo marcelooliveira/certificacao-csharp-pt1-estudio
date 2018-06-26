@@ -39,7 +39,7 @@ namespace certificacao_csharp_roteiro
 
     class Gato : Animal
     {
-        public new void Beber()
+        public void Beber()
         {
             Console.WriteLine("Gato.Beber");
         }
