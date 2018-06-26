@@ -10,6 +10,10 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+            Animal gato = new Gato() { Nome = "Bichano" };
+            gato.Beber();
+            gato.Comer();
+            gato.Andar();
         }
     }
 
@@ -30,6 +34,24 @@ namespace certificacao_csharp_roteiro
         public void Andar()
         {
             Console.WriteLine("Animal.Andar");
+        }
+    }
+
+    class Gato : Animal
+    {
+        public new void Beber()
+        {
+            Console.WriteLine("Gato.Beber");
+        }
+
+        public void Comer()
+        {
+            Console.WriteLine("Gato.Comer");
+        }
+
+        public void Andar()
+        {
+            Console.WriteLine("Gato.Andar");
         }
     }
 }
