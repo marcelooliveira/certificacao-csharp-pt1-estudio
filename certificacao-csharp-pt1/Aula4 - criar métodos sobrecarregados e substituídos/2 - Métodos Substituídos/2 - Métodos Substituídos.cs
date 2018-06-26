@@ -10,10 +10,6 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            Animal gato = new Animal { Nome = "Bichano" };
-            gato.Beber();
-            gato.Comer();
-            gato.Andar();
         }
     }
 
