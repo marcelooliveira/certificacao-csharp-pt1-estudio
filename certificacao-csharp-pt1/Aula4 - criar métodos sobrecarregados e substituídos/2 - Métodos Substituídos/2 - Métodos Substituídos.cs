@@ -14,6 +14,11 @@ namespace certificacao_csharp_roteiro
             gato.Beber();
             gato.Comer();
             gato.Andar();
+
+            Gato gata = new Gato() { Nome = "Pantera" };
+            gata.Beber();
+            gata.Comer();
+            gata.Andar();
         }
     }
 
@@ -26,7 +31,7 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine("Animal.Beber");
         }
 
-        public void Comer()
+        public virtual void Comer()
         {
             Console.WriteLine("Animal.Comer");
         }
@@ -39,17 +44,17 @@ namespace certificacao_csharp_roteiro
 
     class Gato : Animal
     {
-        public void Beber()
+        public new void Beber()
         {
             Console.WriteLine("Gato.Beber");
         }
 
-        public void Comer()
+        public override void Comer()
         {
             Console.WriteLine("Gato.Comer");
         }
 
-        public void Andar()
+        public new void Andar()
         {
             Console.WriteLine("Gato.Andar");
         }
