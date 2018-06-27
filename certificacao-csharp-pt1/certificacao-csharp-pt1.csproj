@@ -70,6 +70,7 @@
     <Compile Include="Aula5 - box ou unbox para converter entre tipos de valor\2 - Unboxing\Unboxing.cs" />
     <Compile Include="Aula6 - cast de tipos\1 - Conversões implícitas\ConversoesImplicitas.cs" />
     <Compile Include="Aula6 - cast de tipos\2 - Conversões explícitas\ConversoesExplicitas.cs" />
+    <Compile Include="Aula6 - cast de tipos\3 - Operadores IS e AS\ConversoesExplicitas.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
