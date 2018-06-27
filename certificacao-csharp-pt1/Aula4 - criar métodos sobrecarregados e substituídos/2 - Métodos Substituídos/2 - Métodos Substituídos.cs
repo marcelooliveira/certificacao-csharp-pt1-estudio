@@ -22,7 +22,14 @@ namespace certificacao_csharp_roteiro
         }
     }
 
-    class Animal
+    interface IAnimal
+    {
+        void Beber();
+        void Comer();
+        void Andar();
+    }
+
+    class Animal : IAnimal
     {
         public String Nome { get; set; }
 

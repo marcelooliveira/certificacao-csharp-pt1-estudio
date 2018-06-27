@@ -68,6 +68,7 @@
     <Compile Include="Aula4 - criar métodos sobrecarregados e substituídos\2 - Métodos Substituídos\2 - Métodos Substituídos.cs" />
     <Compile Include="Aula5 - box ou unbox para converter entre tipos de valor\1 - Boxing\Boxing.cs" />
     <Compile Include="Aula5 - box ou unbox para converter entre tipos de valor\2 - Unboxing\Unboxing.cs" />
+    <Compile Include="Aula6 - cast de tipos\1 - Conversões implícitas\ConversoesImplicitas.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
