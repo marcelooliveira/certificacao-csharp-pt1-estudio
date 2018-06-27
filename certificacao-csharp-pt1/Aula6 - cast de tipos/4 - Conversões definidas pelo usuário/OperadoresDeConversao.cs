@@ -10,28 +10,18 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            //Este exemplo define dois structs, AnguloEmRadianos e AnguloEmGraus, e demonstra conversões entre eles.
+            ///<image url="$(ProjectDir)img14.png" />
 
-            //AnguloEmRadianos radianos;
-            //AnguloEmGraus graus;
-
-
-            //AnguloEmGraus anguloEmGraus = new AnguloEmGraus(45);
-            //Console.WriteLine(anguloEmGraus);
-
-            //AnguloEmRadianos anguloEmRadianos = new AnguloEmRadianos(15);
-            //Console.WriteLine(anguloEmRadianos);
-
-            AnguloEmGraus anguloEmGraus = 45;
+            AnguloEmGraus anguloEmGraus = AnguloEmGraus.Converte(45);
             Console.WriteLine(anguloEmGraus);
 
-            AnguloEmRadianos anguloEmRadianos = 15;
+            AnguloEmRadianos anguloEmRadianos = AnguloEmRadianos.Converte(15);
             Console.WriteLine(anguloEmRadianos);
 
-            int graus = (int)anguloEmGraus;
+            double graus = AnguloEmGraus.Converte(anguloEmGraus);
 
-            anguloEmRadianos = (AnguloEmRadianos)anguloEmGraus;
-            anguloEmGraus = (AnguloEmGraus)anguloEmRadianos;
+            anguloEmRadianos = AnguloEmRadianos.Converte(anguloEmGraus);
+            anguloEmGraus = AnguloEmGraus.Converte(anguloEmRadianos);
             System.Console.WriteLine($"anguloEmGraus: {anguloEmGraus}");
             System.Console.WriteLine($"anguloEmRadianos: {anguloEmRadianos}");
         }
@@ -47,24 +37,19 @@ public struct AnguloEmRadianos
         this.Radianos = radianos;
     }
 
-    public static explicit operator AnguloEmRadianos(AnguloEmGraus graus)
+    public static AnguloEmRadianos Converte(AnguloEmGraus graus)
     {
         return new AnguloEmRadianos(graus.Graus * System.Math.PI / 180);
     }
 
-    public static implicit operator AnguloEmRadianos(double radianos)
+    public static AnguloEmRadianos Converte(double radianos)
     {
         return new AnguloEmRadianos(radianos);
     }
 
-    public static implicit operator double(AnguloEmRadianos radianos)
+    public static double Converte(AnguloEmRadianos radianos)
     {
         return radianos.Radianos;
-    }
-
-    public static implicit operator int(AnguloEmRadianos radianos)
-    {
-        return (int)radianos.Radianos; //cuidado com a perda na conversão!
     }
 
     public override string ToString()
@@ -73,31 +58,25 @@ public struct AnguloEmRadianos
     }
 }
 
-
 public struct AnguloEmGraus
 {
     public double Graus { get; }
 
     public AnguloEmGraus(double graus) { this.Graus = graus; }
 
-    public static explicit operator AnguloEmGraus(AnguloEmRadianos radianos)
+    public static AnguloEmGraus Converte(AnguloEmRadianos radianos)
     {
         return new AnguloEmGraus(radianos.Radianos * 180 / System.Math.PI);
     }
 
-    public static implicit operator AnguloEmGraus(double graus)
+    public static AnguloEmGraus Converte(double graus)
     {
         return new AnguloEmGraus(graus);
     }
 
-    public static implicit operator double(AnguloEmGraus graus)
+    public static double Converte(AnguloEmGraus graus)
     {
         return graus.Graus;
-    }
-
-    public static implicit operator int(AnguloEmGraus graus)
-    {
-        return (int)graus.Graus;  //cuidado com a perda na conversão!
     }
 
     public override string ToString()
