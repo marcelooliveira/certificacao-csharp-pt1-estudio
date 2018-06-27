@@ -10,9 +10,21 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+            int inteiro = 2_123_456_789;
+            long inteiroLongo = inteiro;
+            Console.WriteLine(inteiroLongo);
 
-            ///< image url="$(ProjectDir)img12.png" />
-           
+            //inteiro = inteiroLongo;
+
+            ///<image url="$(ProjectDir)img12.png" />
+
+            Gato gato = new Gato();
+            Animal animal = gato;
+            Console.WriteLine(animal.GetType());
+            IAnimal ianimal = gato;
+            Console.WriteLine(ianimal.GetType());
+            //gato = ianimal;
+
         }
     }
 }
