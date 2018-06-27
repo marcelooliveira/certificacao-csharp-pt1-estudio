@@ -10,13 +10,15 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            ///2_147_483_647;
 
             ///< image url="$(ProjectDir)img12.png" />
            
         }
     }
 }
+
+
+
 //TABELA DE CONVERSÕES NUMÉRICAS IMPLÍCITAS
 //=========================================
 
