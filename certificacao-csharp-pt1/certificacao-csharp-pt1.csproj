@@ -74,6 +74,7 @@
     <Compile Include="Aula6 - cast de tipos\4 - Conversões definidas pelo usuário\OperadoresDeConversao.cs" />
     <Compile Include="Aula6 - cast de tipos\5 - Conversões com classes auxiliares\MetodosAuxiliares.cs" />
     <Compile Include="Aula7 - lidar com tipos dinâmicos\1 - string, var, object e dynamic\UsandoDynamic.cs" />
+    <Compile Include="Aula7 - lidar com tipos dinâmicos\2 - Conversões entre dynamic e outros\ConversoesDeDynamic.cs" />
     <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
