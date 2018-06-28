@@ -10,22 +10,29 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            AppCalculadora calculadora = new AppCalculadora();
+            int int1 = 123;
+            int int2 = 456;
 
+            short short1 = 123;
+            short short2 = 456;
 
-            // A linha seguinte é válida.
-            calculadora.Somar(123);
-            Console.WriteLine($"calculadora.Valor: {calculadora.Valor}");
+            double double1 = 123.45;
+            double double2 = 456.78;
+        }
 
-            dynamic stringDinamica = "uma string";
-            // A seguinte instrução NÃO CAUSA erro de compilação, mesmo calculadora não sendo
-            // dinâmica. Mas ocorre umma exceção de tempo de execução porque o tipo de tempo de
-            // execução é string.
-            //calculadora.Subtrair(stringDinamica);
-            //Console.WriteLine($"calculadora.Valor: {calculadora.Valor}");
+        int Somar(int parcela1, int parcela2)
+        {
+            return parcela1 + parcela2;
+        }
 
-            // A seguinte instrução CAUSA erro de compilação.
-            //calculadora.Subtrair("xpto");
+        short Somar(short parcela1, short parcela2)
+        {
+            return (short)(parcela1 + parcela2);
+        }
+
+        object Somar(object parcela1, object parcela2)
+        {
+            return (double)parcela1 + (double)parcela2;
         }
     }
 }
