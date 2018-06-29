@@ -11,13 +11,13 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            var excel = new Microsoft.Office.Interop.Excel.Application();
+            Type excelType = Type.GetTypeFromProgID("Excel.Application", true);
+            dynamic excel = Activator.CreateInstance(excelType);
 
             excel.Visible = true;
             excel.Workbooks.Add();
 
-            Microsoft.Office.Interop.Excel._Worksheet planilha
-                = (Microsoft.Office.Interop.Excel.Worksheet)excel.ActiveSheet;
+            dynamic planilha = excel.ActiveSheet;
 
             planilha.Cells[1, "A"] = "Alura";
             planilha.Cells[1, "B"] = "Cursos";
