@@ -11,7 +11,8 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            Type excelType = Type.GetTypeFromProgID("Excel.Application", true);
+            Type excelType = Type.GetTypeFromProgID("Excel.Application"
+                , true);
             dynamic excel = Activator.CreateInstance(excelType);
 
             excel.Visible = true;
@@ -28,3 +29,6 @@ namespace certificacao_csharp_roteiro
         }
     }
 }
+
+///<image url="$(ProjectDir)img16.png" />
+
