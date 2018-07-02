@@ -12,76 +12,76 @@ namespace certificacao_csharp_roteiro.antes
         {
             ///<image url="$(ProjectDir)img14.png" />
 
-            AnguloEmGraus anguloEmGraus = 45;
+            AnguloEmGraus anguloEmGraus = AnguloEmGraus.Converte(45);
             Console.WriteLine(anguloEmGraus);
 
-            AnguloEmRadianos anguloEmRadianos = 15;
+            AnguloEmRadianos anguloEmRadianos = AnguloEmRadianos.Converte(15);
             Console.WriteLine(anguloEmRadianos);
 
-            double graus = anguloEmGraus;
+            double graus = AnguloEmGraus.Converte(anguloEmGraus);
 
-            anguloEmRadianos = (AnguloEmRadianos)anguloEmGraus;
-            anguloEmGraus = anguloEmRadianos;
+            anguloEmRadianos = AnguloEmRadianos.Converte(anguloEmGraus);
+            anguloEmGraus = AnguloEmGraus.Converte(anguloEmRadianos);
             System.Console.WriteLine($"anguloEmGraus: {anguloEmGraus}");
             System.Console.WriteLine($"anguloEmRadianos: {anguloEmRadianos}");
         }
     }
+
+    public struct AnguloEmRadianos
+    {
+        public double Radianos { get; }
+
+        public AnguloEmRadianos(double radianos)
+        {
+            this.Radianos = radianos;
+        }
+
+        public static AnguloEmRadianos Converte(AnguloEmGraus graus)
+        {
+            return new AnguloEmRadianos(graus.Graus * System.Math.PI / 180);
+        }
+
+        public static AnguloEmRadianos Converte(double radianos)
+        {
+            return new AnguloEmRadianos(radianos);
+        }
+
+        public static double Converte(AnguloEmRadianos radianos)
+        {
+            return radianos.Radianos;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0} radianos", this.Radianos);
+        }
+    }
+
+    public struct AnguloEmGraus
+    {
+        public double Graus { get; }
+
+        public AnguloEmGraus(double graus) { this.Graus = graus; }
+
+        public static AnguloEmGraus Converte(AnguloEmRadianos radianos)
+        {
+            return new AnguloEmGraus(radianos.Radianos * 180 / System.Math.PI);
+        }
+
+        public static AnguloEmGraus Converte(double graus)
+        {
+            return new AnguloEmGraus(graus);
+        }
+
+        public static double Converte(AnguloEmGraus graus)
+        {
+            return graus.Graus;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0} graus", this.Graus);
+        }
+    }
+
 }
-
-public struct AnguloEmRadianos
-{
-    public double Radianos { get; }
-
-    public AnguloEmRadianos(double radianos)
-    {
-        this.Radianos = radianos;
-    }
-
-    public static explicit operator AnguloEmRadianos (AnguloEmGraus graus)
-    {
-        return new AnguloEmRadianos(graus.Graus * System.Math.PI / 180);
-    }
-
-    public static implicit operator AnguloEmRadianos (double radianos)
-    {
-        return new AnguloEmRadianos(radianos);
-    }
-
-    public static explicit operator double (AnguloEmRadianos radianos)
-    {
-        return radianos.Radianos;
-    }
-
-    public override string ToString()
-    {
-        return String.Format("{0} radianos", this.Radianos);
-    }
-}
-
-public struct AnguloEmGraus
-{
-    public double Graus { get; }
-
-    public AnguloEmGraus(double graus) { this.Graus = graus; }
-
-    public static implicit operator AnguloEmGraus (AnguloEmRadianos radianos)
-    {
-        return new AnguloEmGraus(radianos.Radianos * 180 / System.Math.PI);
-    }
-
-    public static implicit operator AnguloEmGraus (double graus)
-    {
-        return new AnguloEmGraus(graus);
-    }
-
-    public static implicit operator double (AnguloEmGraus graus)
-    {
-        return graus.Graus;
-    }
-
-    public override string ToString()
-    {
-        return String.Format("{0} graus", this.Graus);
-    }
-}
-

@@ -13,22 +13,13 @@ namespace certificacao_csharp_roteiro.antes
             Animal animal = new Animal();
             Gato gato = new Gato();
             Cliente cliente = new Cliente("José da Silva", 30);
-
-            Alimentar(animal);
-            Alimentar(gato);
-            Alimentar(cliente);
         }
 
         public void Alimentar(object obj)
         {
-            if (obj is Animal animal)
-            {
-                animal.Beber();
-                animal.Comer();
-                return;
-            }
-
-            Console.WriteLine("obj não é um animal");
+            Animal animal = (Animal)obj;
+            animal.Beber();
+            animal.Comer();
         }
     }
 }
